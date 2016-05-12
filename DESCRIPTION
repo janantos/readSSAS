@@ -1,0 +1,10 @@
+Package: readSSAS
+Type: Package
+Title: Connects and returns data as data.frame from Microsoft SQL Server Analysis Services
+Version: 1.0
+Date: 2016-01-15
+Author: Jan Antos
+Maintainer: Jan Antos <me@honzucha.me>
+Depends: R (>= 3.1.0), httr, XML
+Description: Connects and returns data as data frame from Microsoft SQL Server Analysis Services. It requires configured HTTP Access to Analysis Services on Internet Information Services (IIS).
+License: GPL-3
