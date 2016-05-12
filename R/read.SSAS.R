@@ -37,7 +37,7 @@ status <- http_status(soapresponse)[['category']]
 
 if (status == "Success")
 { 
-  docxml <- xmlParse(content(soapresponse,"text"), asText = T)
+  docxml <- xmlParse(content(soapresponse,"text", encoding = "UTF-8"), asText = T)
   if (length(xpathSApply(docxml,"/soap:Envelope/soap:Body/soap:Fault")[1][[1]]) == 0)
   {
   #parsing return data
