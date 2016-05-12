@@ -4,6 +4,7 @@ Connects and returns data as data.frame from Microsoft SQL Server Analysis Servi
 TODO: add Discovery command functionality
 
 ## Usage
+```
 library(readSSAS)
 urlstr <- "http://my-web-srv01/OLAP/msmdpump.dll"
 username <- "domain\\username"
@@ -14,6 +15,7 @@ mdx <- "Select [Measures].[Internet Sales Amount] on Columns,
 From [Adventure Works]"
  
 resultset <- read.SSAS(urlstr, username, password, catalog, mdx)
+```
 
 ## History
 
