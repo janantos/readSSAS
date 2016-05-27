@@ -20,6 +20,7 @@ resultset <- read.SSAS(urlstr, username, password, catalog, mdx)
 ## History
 
 12/05/2016 initial commit
+27/05/2016 hotfix - fixed cutting values after decimal point
 
 ## Licence
 

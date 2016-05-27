@@ -44,9 +44,11 @@ if (status == "Success")
   df <- xmlToDataFrame(docxml, nodes = xmlChildren(xmlRoot(docxml)[["Body"]][["ExecuteResponse"]][["return"]][["root"]])[2:length(xmlChildren(xmlRoot(docxml)[["Body"]][["ExecuteResponse"]][["return"]][["root"]]))],stringsAsFactors = F)
   
   # convert to numeric every column possible
-  for (col in names(df)){
-     suppressWarnings(if (all(!is.na(as.numeric(df[[col]][!is.na(df[[col]])])))) {df[[col]] <- sapply(df[[col]], as.numeric)})
-  }
+  # this does not work correctly, cuts value after decimal point
+  # for (col in names(df)){
+  #   suppressWarnings(if (all(!is.na(as.numeric(df[[col]][!is.na(df[[col]])])))) {df[[col]] <- sapply(df[[col]], as.numeric)})
+  # }
+
   # set human readable column names
   namesdf <- data.frame(xmlname = xpathSApply(docxml
 						, "//xsd:schema/xsd:complexType[@name='row']/xsd:sequence/xsd:element/@name"
